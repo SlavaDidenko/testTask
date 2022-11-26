@@ -1,0 +1,12 @@
+.burger {
+	padding: 16px 12px 12px;
+	background-color: $black;
+
+	@media (max-width: $tablet) {
+		padding: 8px 10px;
+		svg {
+			height: 16px;
+			width: 20px;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@include font (KyivTypeSerif ,KyivTypeSerif-Regular, 400, normal);
+
+%syncopate-bold{
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+%syncopate-regular{
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
+}
+
+%kyivtype{
+  font-family: 'KyivTypeSerif', sans-serif;
+  font-weight: 400;
+}

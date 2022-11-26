@@ -1,0 +1,36 @@
+#highload1 {       
+  display: none;
+}
+#highload1+.lb1, #highload1+.lb1::before, #highload1+.lb1::after {
+  transition: all .3s;
+}
+#highload1+.lb1 {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 32px;
+  border-radius: 29px;
+  cursor: pointer;
+}
+#highload1+.lb1::after {
+border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid $ligthGrey;
+  background: url('./img/light.svg') $white center center no-repeat;
+}
+#highload1:checked+.lb1::after {
+  left: 20px;
+  background-color: $darkGrey;
+  border: 1px solid #707070;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: url('./img/Dark.svg') $darkGrey center center no-repeat;
+}
+#highload1+.lb1 {             
+  background: $darkGrey;
+}

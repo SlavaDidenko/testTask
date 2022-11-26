@@ -1,0 +1,204 @@
+.hero {
+  padding: 143px 0 0;
+  @media (max-width: $tablet-wide) {
+    padding: 136px 0 0;
+  }
+  &__wrapper {
+    display: flex;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__left-coll {
+    max-width: 400px;
+    width: 100%;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $desktop) {
+      max-width: 288px;
+      margin-right: 24px;
+    }
+    @media (max-width: $tablet-wide) {
+      max-width: 223px;
+    }
+    @media (max-width: $tablet) {
+      max-width: none;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 51px;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: $desktop) {
+      font-size: 37px;
+      margin: 0 0 16px;
+    }
+    @media (max-width: $tablet-wide) {
+      font-size: 28px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 91px;;
+    }
+  }
+
+  &__title--blue {
+    font-size: 64px;
+    -webkit-text-stroke: $blue 2px;
+    color: transparent;
+    @media (max-width: $desktop) {
+      font-size: 46px;
+    }
+    @media (max-width: $tablet-wide) {
+      font-size: 35px;
+    }
+    @media (max-width: $tablet-wide) {
+      font-size: 114px;
+    }
+  }
+
+  &__bold-text {
+    padding: 28px 0 24px;
+    margin-bottom: 24px;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    @media (max-width: $desktop) {
+      padding: 19px 0;
+    margin-bottom: 16px;
+    }
+  }
+
+  &__list-links {
+    margin-top: 178px;
+    @media (max-width: $desktop) {
+      margin-top: 26px;
+    }
+  }
+
+  &__list-item {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    &:last-child {
+      border-top: none;
+    }
+  }
+
+  &__list-link {
+    padding: 23px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s ease;
+    color: $black;
+
+    path {
+      transition: stroke 0.3s ease;
+    }
+
+    &:hover {
+      color: $blue;
+      path {
+        stroke: $blue;
+      }
+    }
+
+    @media (max-width: $desktop) {
+      padding: 16px 0;
+    }
+  }
+
+  &__rigth-coll {
+    width: 100%;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+    @media (max-width: $tablet) {
+      height: 419px;
+    }
+    @media (max-width: $phone-wide) {
+      height: 328px;
+    }
+  }
+
+  &__slider-wrapper {
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+    background: url("img/slide-img1.jpg") center no-repeat;
+    background-size: cover!important;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__slider-control {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: $white;
+    @media (max-width: $tablet-wide) {
+      gap: 16px;
+    }
+  }
+  &__slide-prev {
+    transform: rotate(180deg);
+  }
+
+  &__slide-prev, &__slide-next {
+    height: 41px;
+    width: 47px;
+    @media (max-width: $tablet-wide) {
+      height: 28px;
+      width: 32px;
+    }
+    transition: all .3s ease;
+    background: url('./img/row.svg') no-repeat;
+    background-size: cover;
+  }
+
+
+  &__slider-counter {
+    @extend %syncopate-regular;
+    @include fontsize(36, 37);
+    @media (max-width: $tablet-wide) {
+      @include fontsize(24, 25);
+    }
+  }
+
+  &__slide-now {
+    @extend %syncopate-bold;
+  }
+}
+
+  .hero__slide-next:hover, .hero__slide-prev:hover {
+    background: url('./img/row-fill.svg') no-repeat;
+    background-size: cover;
+}

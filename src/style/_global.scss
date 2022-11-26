@@ -1,0 +1,28 @@
+.text {
+  @extend %kyivtype;
+  @include fontsize(16,24);
+  color: $black;
+  @media (max-width: $tablet-wide) {
+    @include fontsize(14,22);
+  }
+}
+
+.bold-text {
+  @include fontsize(15,16);
+  text-transform: uppercase;
+  color: $black;
+  @media (max-width: $tablet-wide) {
+    @include fontsize(14,15);
+  }
+}
+
+.swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+.title {
+  @include fontsize(36,37);
+  text-transform: uppercase;
+  color: $black;
+}

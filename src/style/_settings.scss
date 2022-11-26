@@ -1,0 +1,105 @@
+* {
+  padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+  @extend %syncopate-bold;
+  overflow-anchor: none;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+  margin: 0;
+}
+
+.site-container {
+  min-height: 100%;
+	display: flex;
+	flex-direction: column;
+  overflow: hidden;
+  // Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 70px;
+  max-width: calc(1694px + 140px);
+  @media (max-width: $tablet-wide) {
+    padding: 0 40px;
+  }
+  @media (max-width: $tablet) {
+    padding: 0 32px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}

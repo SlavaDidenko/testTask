@@ -1,0 +1,128 @@
+.news {
+  padding: 88px 0 0;
+  @media (max-width: $tablet-wide) {
+    padding: 70px 0 0;
+  }
+  @media (max-width: $tablet) {
+    .container {
+      padding: 0;
+      padding-left: max(32px, calc((100% - 1694px) / 2));
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    @media (max-width: $tablet-wide) {
+      @include fontsize(32,34);
+    }
+    @media (max-width: $tablet) {
+      @include fontsize(24,25);
+    }
+  }
+
+  &__slider-wrapper {
+    @media (max-width: $tablet) {
+      padding-bottom: 40px;
+    }
+}
+
+.news__scrollbar {
+  background-color: #EFEFEF;
+  height: 16px;
+  border-radius: 0;
+  left: 0!important;
+  width: calc(100% - 32px)!important;
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: $black;
+    border-radius: 0;
+  }
+}
+
+.news__slider {
+  overflow: unset;
+}
+
+.card {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $tablet) {
+    width: 224px;
+  }
+  @media (max-width: $phone-wide) {
+    width: 288px;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $blue;
+    border: 1px solid $black;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+  }
+  &:hover {
+    &::before {
+      transform: translate(-6px, 6px);
+    }
+  }
+  &__wrapper-img {
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 232px;
+        object-fit: cover;
+
+        @media (max-width: $desktop) {
+          height: 167px;
+        }
+        @media (max-width: $tablet-wide) {
+          height: 136px;
+        }
+        @media (max-width: $phone-wide) {
+          height: 167px;
+        }
+      }
+    }
+
+    &__wrapper-info {
+      padding: 16px 24px;
+      border-top: 1px solid $black;
+      flex: 1;
+
+      @media (max-width: $desktop) {
+        padding: 11px 24px;
+      }
+      @media (max-width: $tablet-wide) {
+        padding: 11px 16px;
+      }
+      @media (max-width: $phone-wide) {
+        padding: 11px 25px 24px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__text {
+      @extend %kyivtype;
+      @include fontsize(16,24);
+      color: $black;
+    }
+  }
+}

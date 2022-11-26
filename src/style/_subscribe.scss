@@ -1,0 +1,83 @@
+.subscribe {
+  padding: 78px 0 0;
+  @media (max-width: $desktop) {
+    padding: 60px 0 0;
+  }
+  @media (max-width: $tablet) {
+    padding: 70px 0 0;
+  }
+  &__wrapper {
+    padding: 88px 0;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: $tablet) {
+      padding: 55px 0 ;
+    }
+  }
+
+  &__title {
+    max-width: 1110px;
+    text-align: center;
+    margin: 0 0 24px;
+    @media (max-width: $tablet) {
+      @include fontsize(24,25)
+    }
+  }
+
+  &__form {
+    display: block;
+    margin: 0 auto;
+    max-width: 832px;
+    width: 100%;
+    @media (max-width: $tablet) {
+      max-width: 624px;
+    }
+    }
+}
+.form {
+
+  &__input {
+    @extend %kyivtype;
+    @include fontsize(18,24);
+    padding: 12px 24px;
+    color: $black;
+    background: $white;
+    border: 1px solid #C6C6C6;
+    border-right: none;
+
+    width: 100%;
+    max-width: 580px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__btn {
+    @extend %syncopate-bold;
+    @include fontsize(18,1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $black;
+    width: 250px;
+    min-height: 50px;
+    padding: 14px 0 10px;
+
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    @media (max-width: $tablet) {
+      width: 208px;
+    }
+    transition: all .3s ease;
+  }
+}
+
+.form__btn:hover {
+    background-color: $blue;
+}

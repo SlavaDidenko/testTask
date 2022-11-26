@@ -1,0 +1,16 @@
+@import 'libs/normalize';
+@import 'style/var';
+@import 'style/settings';
+@import 'style/mixins';
+@import 'style/fonts';
+@import 'style/icons-font.css';
+
+@import 'style/_global.scss';  
+@import 'style/_header.scss'; 
+@import 'style/_burger.scss'; 
+@import 'style/_hero.scss';
+@import 'style/news';
+@import 'style/subscribe'; 
+@import 'style/footer'; 
+@import 'style/menu';
+@import 'style/select';
